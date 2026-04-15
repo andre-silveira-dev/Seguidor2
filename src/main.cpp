@@ -29,8 +29,9 @@ void setup() {
     pinMode(RIGHT_FRONT_DIGITAL_INPUT_PIN, INPUT);
     pinMode(LEFT_REAR_DIGITAL_INPUT_PIN, INPUT);
     pinMode(RIGHT_REAR_DIGITAL_INPUT_PIN, INPUT);
-    pinMode(RODA_OUTPUT_A, OUTPUT);
-    pinMode(RODA_OUTPUT_B, OUTPUT);
+
+    pinMode(LEFT_WHEEL_OUPUT_PIN_A, OUTPUT);
+    pinMode(RIGHT_WHEEL_OUTPUT_PIN_B, OUTPUT);
 }
 
 void loop() {
@@ -74,7 +75,7 @@ void loop() {
 
 void turnLeft(){
     digitalWrite(RIGHT_WHEEL_OUTPUT_PIN_A, 1);
-    digitalWrite()
+    digitalWrite(LEFT_WHEEL_OUPUT_PIN_A, 0);
 }
 
 void turnRight(){
@@ -84,5 +85,6 @@ void turnRight(){
 }
 
 void forward(){
-    //digitalWrite(RODA_OUTPUT_A, 0);
+    digitalWrite(RIGHT_WHEEL_OUTPUT_PIN_A, 1);
+    digitalWrite(LEFT_WHEEL_OUPUT_PIN_A, 1);
 }
